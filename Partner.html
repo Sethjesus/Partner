@@ -14,6 +14,10 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-image: url('https://github.com/Sethjesus/Photo/blob/main/sky6.jpg?raw=true'); /* 背景圖片URL */
+            background-size: cover; /* 確保背景圖片覆蓋整個頁面 */
+            background-position: center; /* 背景圖位置 */
+            background-attachment: fixed; /* 固定背景圖片 */
         }
         .container {
             width: 90%;
@@ -21,12 +25,20 @@
             margin: 0 auto;
             padding: 20px;
             flex: 1;
+            background-color: rgba(255, 255, 255, 0.9); /* 白色背景並加透明度 */
+            border-radius: 10px; /* 圓角效果 */
         }
         h1 {
             text-align: center;
             margin-top: 20px;
             color: #007bff;
             font-size: 48px;
+        }
+        
+        .highlight {
+            font-size: 24px;
+            font-weight: bold;
+            color: #071a2e;
         }
         .content-table {
             width: 100%;
@@ -35,16 +47,16 @@
         }
         .content-table td {
             padding: 20px;
-            border: 1px solid #dddddd;
+            border: 3px solid #f1e2e2;
             vertical-align: middle;
         }
         .first-row td {
-            background-color: #28a745; /* 綠色背景 */
-            color: #ffffff; /* 白色文字 */
+            background-color: #28a745;
+            color: #ffffff;
             text-align: center;
         }
         .content-left {
-            text-align: left; /* 靠左對齊 */
+            text-align: left;
         }
         .image-grid {
             display: grid;
@@ -54,22 +66,22 @@
         }
         .image-grid a {
             display: block;
-            overflow: hidden; /* 確保圖片放大時不會超出範圍 */
+            overflow: hidden;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初始的浮凸效果 */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動畫效果 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .image-grid img {
             width: 100%;
             border-radius: 8px;
-            transition: transform 0.3s ease; /* 動畫效果 */
+            transition: transform 0.3s ease;
         }
         .image-grid a:hover {
-            transform: scale(1.05); /* 放大圖片 */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 更強的浮凸效果 */
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         .image-grid a:hover img {
-            transform: scale(1.1); /* 放大圖片內部 */
+            transform: scale(1.1);
         }
         footer {
             position: relative;
@@ -97,7 +109,7 @@
             transition: background-color 0.3s ease;
         }
         .back-button:hover {
-            background-color: #218838; /* 更深的綠色 */
+            background-color: #218838;
         }
     </style>
 </head>
@@ -115,8 +127,8 @@
             </tr>
             <tr>
                 <td class="content-left">
-                    <p>溫室氣體輔導</p>
-                    <p>溫室氣體盤查流程文件產製出</p>
+                    <p class="highlight">溫室氣體輔導</p>
+                    <p class="highlight">溫室氣體盤查流程文件產製出</p>
                 </td>
                 <td>
                     <div class="image-grid">
